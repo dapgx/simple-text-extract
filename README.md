@@ -8,8 +8,10 @@ Pillow (PIL)
 pytesseract
 You can install these dependencies using pip:
 
-pip install flask pillow pytesseract
-
+``` pip3 install flask ```
+``` pip3 install Image ```
+``` pip3 install pytesseract ```
+``` apt install tesseract-ocr ```
 
 ## Usage
 
