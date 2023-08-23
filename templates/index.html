@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cool Homepage</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #007BFF;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #007BFF;
+            background-color: #f0f0f0;
+            color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px; /* Add margin to create a gap */
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .error {
+            color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cool Image Text Extractor</h1>
+        <p>Select an image to extract text from:</p>
+        <form method="POST" action="/extract_text" enctype="multipart/form-data">
+            <input type="file" name="image" accept=".jpg, .jpeg, .png">
+            <button type="submit">Extract Text</button>
+        </form>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
