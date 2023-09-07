@@ -18,7 +18,7 @@ You can install these dependencies using pip:
 1. Clone this repository or download the source code.
 2. Run the Flask app:
 
-``` python app.py ```
+``` python3 app.py ```
 
 3. Open your web browser and navigate to http://localhost:5000.
 4. Upload an image using the provided form.
